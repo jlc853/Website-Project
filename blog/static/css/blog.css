@@ -9,7 +9,7 @@ body {
 }
 
 .page-header {
-    background-image: url("../Images/roll-start.png");
+    background-image: url("/static/Images/roll-start.png");
     margin-top: 0;
     padding: 750px 0px 300px 900px;
     background-repeat: no-repeat;
@@ -108,5 +108,5 @@ h4 a {
 
 body {
 
-    background-image: url("../Images/roll-continued.png");
+    background-image: url("/static/Images/roll-continued.png");
 }
