@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ""
 if platform == "linux" or platform == "linux2":
-    SECRET_KEY = os.environ['SECRET_KEY']
+    SECRET_KEY = os.getenv('SECRET_KEY')
 elif platform == "win32":
     with open(BASE_DIR+'/secret_key') as f:
         SECRET_KEY = f.read().strip()
