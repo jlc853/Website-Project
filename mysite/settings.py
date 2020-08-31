@@ -25,7 +25,8 @@ DEBUG = True
 # SECURITY WARNING: keep the secret key used in production secret!
 if platform == "linux" or platform == "linux2":
     DEBUG = False
-    SECRET_KEY = os.getenv('SECRET_KEY')
+    with open(BASE_DIR+'/secret_key') as f:
+        SECRET_KEY = f.read().strip()
 elif platform == "win32":
     with open(BASE_DIR+'/secret_key') as f:
         SECRET_KEY = f.read().strip()
