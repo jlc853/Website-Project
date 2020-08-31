@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+
+<head>
+    <title>CV</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/CV.css' %}">
+    <link href='//fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext' rel='stylesheet' type='text/css'
+>
+
+</head>
+
+<body>
+    <div>
+        <div class="page-header">
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+            <h3><a href="/">Back to Blog</a></h3>
+            <h4><a href="{% url 'CV' %}">Joshi Chan's CV</a></h4>
+        </div>
+
+    </div>
+
+    <div class="content container">
+        <h2>About Me</h2>
+        {% if user.is_authenticated %}
+        {% endif %}
+        <div class="About Me">
+            <b>Lorem ipsum</b>
+            {% block 0 %}
+            {% endblock %}
+
+        </div>
+        
+        <h2>Achievements</h2>
+        {% if user.is_authenticated %}
+        {% endif %}
+        <div class="Achievements">
+            {% block 1 %}
+            {% endblock %}
+        </div>
+        
+        <h2>Qualifications</h2>
+        {% if user.is_authenticated %}
+        {% endif %}
+        <div class="Qualifications">
+            {% block 2 %}
+            {% endblock %}
+        </div>
+
+        <h3><a href="https://github.com/jlc853">Github Link</a></h2>
+
+    </div>
+</body>
+
+</html>
